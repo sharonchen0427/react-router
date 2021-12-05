@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-class atguigu(https://www.youtube.com/watch?v=LZk5ms4lBOk) 74-85
+class [Atguigu](https://www.youtube.com/watch?v=LZk5ms4lBOk) 74-85
 
 ## Available Scripts
 
