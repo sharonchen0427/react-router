@@ -1,16 +1,21 @@
 import React, { Component } from 'react'
-import {Route,Routes} from 'react-router-dom'
+import { Route, Routes, Navigate} from 'react-router-dom'
 import About from './pages/About'
 import Home from './pages/Home'
 import Header from './components/Header'
 import MyNavLink from './components/MyNavLink'
+//v5: react-router-dom
+//https://v5.reactrouter.com/web/example/auth-workflow
+//v6: react-router-dom
+//https://reactrouter.com/docs/en/v6/examples/route-objects
+//https://stackblitz.com/github/remix-run/react-router/tree/main/examples/route-objects?file=src/App.tsx
 
 export default class App extends Component {
   render() {
     return (
       <div className="row">
         <div className="col-xs-offset-2 col-xs-8">
-          <Header/>
+          <Header />
         </div>
         <div className="col-xs-2 col-xs-offset-2">
           <div className="list-group">
@@ -27,14 +32,19 @@ export default class App extends Component {
             <div className="panel-body">
               {/* <h3>我是Home的内容</h3> */}
               <Routes>
-                <Route path='/about' element={<About/>}/>
-                <Route  path='/' element={<Home/>}/>
+                {/* switch/routes make sure once match, will not match any more */}
+                {/* exact key word to match url exactly/strictly */}
+                <Route /*exact*/ path='/about' element={<About />} />
+                <Route path='/' element={<Home />} />
+                {/* <Navigate to='/'/> */}
+                {/*for react-router-dom v6, simply replace Redirect with Navigate
+                 replace  switch to Routes*/}
               </Routes>
             </div>
           </div>
         </div>
       </div>
-    
+
       // <div className="list-group">
       //   {/* <a className="list-group-item" href="./about.html">About</a>
       //   <a className="list-group-item active" href="./home.html">Home</a> */}
